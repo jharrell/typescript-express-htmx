@@ -1,0 +1,9 @@
+tr(hx-trigger="cancel" class="editing" hx-get=`/books/${book.id}`)
+  td 
+    input(type="text" name="title" value=`${book.title}`)
+  td 
+    input(type="text" name="author" value=`${book.author}`)
+  td 
+    button(class="btn btn-primary" hx-get=`/books/${book.id}`) Cancel
+  td 
+    button(class="btn btn-primary" hx-put=`/books/${book.id}` hx-include="closest tr") Save
